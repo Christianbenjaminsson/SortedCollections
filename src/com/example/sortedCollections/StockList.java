@@ -60,7 +60,5 @@ public class StockList {
         }
 
         return s + "Total stock value " + totalCost;
-
-        System.out.println("Remove this text");
     }
 }
