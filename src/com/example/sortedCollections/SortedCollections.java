@@ -36,5 +36,9 @@ public class SortedCollections {
         stocklist.addStock(temp);
 
         System.out.println(stocklist);
+
+        for (String s: stocklist.Items().keySet()) {
+            System.out.println(s);
+        }
     }
 }
