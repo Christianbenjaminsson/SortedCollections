@@ -5,8 +5,6 @@ public class SortedCollections {
     private static StockList stocklist = new StockList();
 
     public static void main(String[] args) {
-
-        System.out.println("This is a test");
         StockItem temp = new StockItem("bread", 0.86, 100);
         stocklist.addStock(temp);
 
