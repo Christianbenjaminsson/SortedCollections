@@ -19,6 +19,8 @@ public class SortedCollections {
 
         temp = new StockItem("cup", 0.50, 200);
         stocklist.addStock(temp);
+        temp = new StockItem("cup", 0.45, 7);
+        stocklist.addStock(temp);
 
         temp = new StockItem("door", 72.95, 4);
         stocklist.addStock(temp);
@@ -40,5 +42,19 @@ public class SortedCollections {
         for (String s: stocklist.Items().keySet()) {
             System.out.println(s);
         }
+    }
+
+    public static int sellItem(Basket basket, String item, int quantity) {
+        // retrieve the item from stock list
+        StockItem stockitem = stocklist.get(item);
+        if(stockitem == null) {
+            System.out.println("We don´t sell item" + item);
+            return 0;
+        }
+        if(stocklist.sellStock(item, quantity) !=0) {
+            basket.addToBasket(stockitem, quantity);
+            return quantity;
+        }
+        return 0;
     }
 }
