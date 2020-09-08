@@ -42,6 +42,17 @@ public class SortedCollections {
         for (String s: stocklist.Items().keySet()) {
             System.out.println(s);
         }
+
+        Basket timsBasket = new Basket("Tim");
+        sellItem(timsBasket, "car", 1);
+        System.out.println(timsBasket);
+
+        sellItem(timsBasket, "car", 1);
+        System.out.println(timsBasket);
+
+        sellItem(timsBasket, "car", 1);
+        sellItem(timsBasket, "spanner", 5);
+        System.out.println(timsBasket);
     }
 
     public static int sellItem(Basket basket, String item, int quantity) {
