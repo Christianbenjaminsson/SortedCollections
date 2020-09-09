@@ -53,6 +53,13 @@ public class SortedCollections {
         sellItem(timsBasket, "car", 1);
         sellItem(timsBasket, "spanner", 5);
         System.out.println(timsBasket);
+
+        sellItem(timsBasket, "juice", 4);
+        sellItem(timsBasket, "cup",12);
+        sellItem(timsBasket, "bread",1);
+        System.out.println(timsBasket);
+
+        System.out.println(stocklist);
     }
 
     public static int sellItem(Basket basket, String item, int quantity) {
