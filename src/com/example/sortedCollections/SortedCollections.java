@@ -50,7 +50,10 @@ public class SortedCollections {
         sellItem(timsBasket, "car", 1);
         System.out.println(timsBasket);
 
-        sellItem(timsBasket, "car", 1);
+        if(sellItem(timsBasket, "car", 1) != 1) {
+            System.out.println("There are no more cars in stock");
+        }
+
         sellItem(timsBasket, "spanner", 5);
         System.out.println(timsBasket);
 
