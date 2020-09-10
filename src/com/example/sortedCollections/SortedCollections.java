@@ -1,5 +1,7 @@
 package com.example.sortedCollections;
 
+import java.util.Map;
+
 public class SortedCollections {
 
     private static StockList stocklist = new StockList();
@@ -71,6 +73,9 @@ public class SortedCollections {
         stocklist.Items().get("car").adjustStock(2000);
         stocklist.Items().get("car").adjustStock(-1000);
         System.out.println(stocklist);
+        for(Map.Entry<String, Double> price: stocklist.PriceList().entrySet()) {
+            System.out.println(price.getKey() + " costs " + price.getValue());
+        }
     }
 
     public static int sellItem(Basket basket, String item, int quantity) {
