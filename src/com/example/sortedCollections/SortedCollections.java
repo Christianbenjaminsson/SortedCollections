@@ -63,6 +63,14 @@ public class SortedCollections {
         System.out.println(timsBasket);
 
         System.out.println(stocklist);
+
+        //Fails beacuse of unmodifiableMap
+        /*temp = new StockItem("pen", 1.12);
+        stocklist.Items().put(temp.getName(), temp);*/
+
+        stocklist.Items().get("car").adjustStock(2000);
+        stocklist.Items().get("car").adjustStock(-1000);
+        System.out.println(stocklist);
     }
 
     public static int sellItem(Basket basket, String item, int quantity) {

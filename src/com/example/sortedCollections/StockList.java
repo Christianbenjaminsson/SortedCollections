@@ -1,6 +1,7 @@
 package com.example.sortedCollections;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -39,6 +40,14 @@ public class StockList {
 
     public StockItem get (String key) {
         return list.get(key);
+    }
+
+    public Map<String, Double> PriceList() {
+        Map<String, Double> prices = new HashMap<>();
+        for(Map.Entry<String, StockItem> item : list.entrySet()) {
+            prices.put(item.getKey(), item.getValue().getPrice());
+        }
+        return Collections.unmodifiableMap(prices);
     }
 
     public Map<String, StockItem> Items() {
