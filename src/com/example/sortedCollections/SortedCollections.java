@@ -71,7 +71,7 @@ public class SortedCollections {
         stocklist.Items().put(temp.getName(), temp);*/
 
         stocklist.Items().get("car").adjustStock(2000);
-        stocklist.Items().get("car").adjustStock(-1000);
+        stocklist.get("car").adjustStock(-1000);
         System.out.println(stocklist);
         for(Map.Entry<String, Double> price: stocklist.PriceList().entrySet()) {
             System.out.println(price.getKey() + " costs " + price.getValue());
